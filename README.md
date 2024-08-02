@@ -17,7 +17,7 @@ let
 // Parameters
     StartDate = #date(2024,1,1), // Change as required
     EndDate = #date(2027, 1, 1), // Change as required
-    FiscalYear_IndexMonth = 4, // Assuming April 1st until 31st March
+    FiscalYear_IndexMonth = 3, // Assuming April 1st until 31st March
 //Convert (into a table) and Create a list of dates
     Source = List.Dates(StartDate, Duration.Days(EndDate-StartDate)+1, #duration(1,0,0,0) ),
     #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
